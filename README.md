@@ -9,5 +9,6 @@
 > https://github.com/ndb796/python-for-coding-test
 
 
-## 💙 공부 진도 기록
-[공부 진도 기록 wiki](https://github.com/SeoMiYoung/ready-for-coding-test/wiki/%EA%B3%B5%EB%B6%80-%EC%A7%84%EB%8F%84-%EA%B8%B0%EB%A1%9D)
+## 💙 기록
+> [공부 진도 기록 wiki](https://github.com/SeoMiYoung/ready-for-coding-test/wiki/%EA%B3%B5%EB%B6%80-%EC%A7%84%EB%8F%84-%EA%B8%B0%EB%A1%9D)<br/>
+> [공부 이슈 기록](https://github.com/SeoMiYoung/ready-for-coding-test/issues?q=is%3Aissue+is%3Aclosed)
