@@ -1,0 +1,68 @@
+N, M = map(int, input().split())
+y, x, d = map(int, input().split())
+
+# N * M 생성
+game_map = [[0 for c in range(M)] for r in range(N)]
+
+for i in range(N):
+    map_info = list(map(int, input().split()))
+    for j in range(M):
+        game_map[i][j] = map_info[j]
+print(game_map)
+
+direction = [  # 북, 동, 남, 서 
+    (-1, 0), (0, 1), (1, 0), (0, -1)
+]
+
+# 왼쪽으로 회전
+def turn_left():
+    global d
+    d = d-1
+    if d==-1:
+        d = 3
+
+# 회전 횟수
+turn_time = 0
+# 방문 횟수
+count = 1
+
+game_map[y][x] = 1 
+while True: # 회전을 할때마다 while문을 돌림, 새로운 좌표인지의 여부는 turn_time으로 구분 가능
+    # 일단 한번 회전한다.
+    turn_left()
+
+    # 새로운 좌표
+    ny = y + direction[d][0]
+    nx = x + direction[d][1]
+
+    if game_map[ny][nx]==1:  # 만약에 새로운 방향이 막혀있다면
+        turn_time = turn_time + 1 
+    else: # 새로운 방향이 막혀있지 않다면
+        # 새로운 좌표 부여
+        y = ny
+        x = nx
+
+        # 방문 횟수 증가 및 기록
+        count = count + 1
+        game_map[y][x] = 1
+
+        # 새로운 시작점에 위치했으니, turn_time을 0으로 초기화
+        turn_time = 0
+    
+    # -------------------------------- 4번 회전했는지 검사 ------------------------------------
+    if turn_time == 4:
+        # 새로운 좌표 계산 (뒤로 가는)
+        ny = y - direction[d][0]
+        nx = x - direction[d][1]
+
+        if game_map[ny][nx]==0: #막혀있지 않다면
+            # 새로운 좌표 지정
+            y = ny
+            x = nx
+
+            # 다시 횟수 처음부터
+            turn_time = 0
+        else: # while문 종료
+            break
+
+print(f'결과: {count}')

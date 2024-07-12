@@ -1,0 +1,12 @@
+N = int(input())
+sum = 0
+
+for i in range(N+1):
+    # 0부터 N까지
+
+    if i!=0 and i%3==0:
+        sum = sum + 3600
+    else:
+        sum = sum + 1575
+
+print(f'합계: {sum}')
