@@ -9,5 +9,6 @@
 > https://github.com/ndb796/python-for-coding-test
 
 
-## 💙 공부 기록
-책으로 공부하면서, `개념/문법/일부 문제풀이`를 정리해놓았습니다 → [공부 이슈 기록](https://github.com/SeoMiYoung/ready-for-coding-test/issues?q=is%3Aissue+is%3Aclosed)
+## 💙 1회독 규칙
+- 우선 먼저 정답을 보고 코드를 이해한다.
+- 정답을 보지 않고 스스로 다시 풀어본다.
